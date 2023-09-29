@@ -1,5 +1,10 @@
 [
 	{
+		"id" : "test",
+		"path" : "src/windows/test.ps1",
+		"description" : "ad hoc debuggery"
+ 	},
+	{
 		"id" : "win-dhcp-fix",
 		"path" : "src/windows/win-dhcp-fix.ps1",
 		"description" : "DHCP Service fixer offline from rescue VM"
