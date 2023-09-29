@@ -11,6 +11,7 @@ $scriptName = (split-path -path $MyInvocation.MyCommand.Path -leaf).Split('.')[0
 $guestHyperVVirtualMachine = Get-VM
 $guestHyperVVirtualMachineName = $guestHyperVVirtualMachine.VMName
 
-Log-Output "START: Running script $scriptName on $guestHyperVVirtualMachineName "
+Log-Output "START: Running script $scriptName"
+Log-Output "on $guestHyperVVirtualMachineName "
 
 return $STATUS_SUCCESS
