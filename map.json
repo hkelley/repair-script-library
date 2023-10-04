@@ -1,7 +1,7 @@
 [
 	{
-		"id" : "test",
-		"path" : "src/windows/test.ps1",
+		"id" : "si-test",
+		"path" : "src/windows/si-test.ps1",
 		"description" : "ad hoc debuggery"
  	},
 	{
