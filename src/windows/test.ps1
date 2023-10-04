@@ -1,17 +1,9 @@
-Param([Parameter(Mandatory=$false)][string]$gen='1')
 
-# Initialize script
-. .\src\windows\common\setup\init.ps1
-#. .\src\windows\common\helpers\Get-Disk-Partitions.ps1
+$STATUS_SUCCESS = '[STATUS]::SUCCESS'
+$STATUS_ERROR = '[STATUS]::ERROR'
 
-# Declare variables
-$scriptStartTime = get-date -f yyyyMMddHHmmss
-$scriptPath = split-path -path $MyInvocation.MyCommand.Path -parent
-$scriptName = (split-path -path $MyInvocation.MyCommand.Path -leaf).Split('.')[0]
-$guestHyperVVirtualMachine = Get-VM
-$guestHyperVVirtualMachineName = $guestHyperVVirtualMachine.VMName
+$item = Get-Item .
 
-Log-Output "START: Cranking up script $scriptName"
-Log-Output "on $guestHyperVVirtualMachineName "
+Write-Output "[Output $(Get-Date)]  Running from $item on $env:computername"
 
 return $STATUS_SUCCESS
